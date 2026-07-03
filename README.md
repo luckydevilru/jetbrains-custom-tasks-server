@@ -43,6 +43,6 @@
 ```
 
 ## настройки в самом phpstorm 
-![ScreenSettings1](https://github.com/luckydevilru/jetbrains-custom-tasks-server/blob/master/public/img/Screenshot From 2026-07-03 19-53-48.png)
+![ScreenSettings1](https://github.com/luckydevilru/jetbrains-custom-tasks-server/blob/master/public/img/Screenshot%20From%202026-07-03%2019-53-48.png)
 <br>
-![ScreenSettings2](https://github.com/luckydevilru/jetbrains-custom-tasks-server/blob/master/public/img/Screenshot%20From%202026-07-03 19-53-27.png)
+![ScreenSettings2](https://github.com/luckydevilru/jetbrains-custom-tasks-server/blob/master/public/img/Screenshot%20From%202026-07-03%2019-53-27.png)
