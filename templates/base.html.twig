@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="stylesheet" href=".{{ asset('/css/style.css') }}" type="text/css"/>
+    <script src=".{{ asset('/js/jquery-3.7.0.min.js') }}"></script>
+    <script src=".{{ asset('/js/bx-api.js') }}"></script>
+    <script>
+        const clientId = '{{ contact.UF_CUSTOMER_NO_ABS }}';
+    </script>
+</head>
+<body>
+<div class="container tabs-container">
+    <div id="notice" class="notice"></div>
+    {% if roles.isManager == true or roles.isDirector == true %}
+        <pre id="result"></pre>
+        <script src=".{{ asset('/app.js') }}"></script>
+    {% else %}
+        У вас нет прав доступа к этому приложению!
+    {% endif %}
+</div>
+</body>
+</html>

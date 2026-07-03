@@ -1,0 +1,106 @@
+when@dev:
+    monolog:
+        handlers:
+            errors_logger:
+                level: error
+                type: rotating_file
+                max_files: 10
+                formatter: monolog.formatter.json
+                path: '/var/log/apps/%env(string:APP_NAME)%/errors_%kernel.environment%.json'
+            debug_logger:
+                level: debug
+                type: rotating_file
+                max_files: 10
+                formatter: monolog.formatter.json
+                path: '/var/log/apps/%env(string:APP_NAME)%/debug_%kernel.environment%.log'
+            request:
+                level: debug
+                type: rotating_file
+                max_files: 10
+                formatter: monolog.formatter.json
+                path: '/var/log/apps/%env(string:APP_NAME)%/request_%kernel.environment%.log'
+                channels: [ request ]
+            main:
+                type: rotating_file
+                path: '/var/log/apps/%env(string:APP_NAME)%/%kernel.environment%.log'
+                level: info
+                max_files: 10
+                formatter: monolog.formatter.json
+                channels: [ "!request" ]
+
+when@test:
+    monolog:
+        handlers:
+            errors_logger:
+                level: error
+                type: rotating_file
+                max_files: 10
+                formatter: monolog.formatter.json
+                path: '/var/log/apps/%env(string:APP_NAME)%/errors_%kernel.environment%.json'
+            debug_logger:
+                level: debug
+                type: rotating_file
+                max_files: 10
+                formatter: monolog.formatter.json
+                path: '/var/log/apps/%env(string:APP_NAME)%/debug_%kernel.environment%.log'
+            request:
+                level: debug
+                type: rotating_file
+                max_files: 10
+                formatter: monolog.formatter.json
+                path: '/var/log/apps/%env(string:APP_NAME)%/request_%kernel.environment%.log'
+                channels: [ request ]
+            main:
+                type: rotating_file
+                path: '/var/log/apps/%env(string:APP_NAME)%/%kernel.environment%.log'
+                level: info
+                max_files: 10
+                formatter: monolog.formatter.json
+                channels: [ "!request" ]
+
+when@preprod:
+    monolog:
+        handlers:
+            errors_logger:
+                level: error
+                type: rotating_file
+                max_files: 10
+                formatter: monolog.formatter.json
+                path: '/var/log/apps/%env(string:APP_NAME)%/errors_%kernel.environment%.json'
+            debug_logger:
+                level: debug
+                type: rotating_file
+                max_files: 10
+                formatter: monolog.formatter.json
+                path: '/var/log/apps/%env(string:APP_NAME)%/debug_%kernel.environment%.log'
+            request:
+                level: debug
+                type: rotating_file
+                max_files: 10
+                formatter: monolog.formatter.json
+                path: '/var/log/apps/%env(string:APP_NAME)%/request_%kernel.environment%.log'
+                channels: [ request ]
+            main:
+                type: rotating_file
+                path: '/var/log/apps/%env(string:APP_NAME)%/%kernel.environment%.log'
+                level: info
+                max_files: 10
+                formatter: monolog.formatter.json
+                channels: [ "!request" ]
+
+
+when@prod:
+    monolog:
+        handlers:
+            errors_logger:
+                level: error
+                type: rotating_file
+                max_files: 10
+                formatter: monolog.formatter.json
+                path: '/var/log/apps/%env(string:APP_NAME)%/errors_%kernel.environment%.json'
+            debug_logger:
+                level: debug
+                type: rotating_file
+                max_files: 10
+                formatter: monolog.formatter.json
+                path: '/var/log/apps/%env(string:APP_NAME)%/debug_%kernel.environment%.log'

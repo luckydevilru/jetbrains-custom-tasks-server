@@ -1,0 +1,29 @@
+when@test:
+  nelmio_api_doc:
+    documentation:
+      servers:
+        - url: https://test-b24-appserv.frhc.group/apps/test/tariffs
+          description: tariffs app API
+      info:
+        title: tariffs app API
+        description: tariffs app API
+        version: 1.0.0
+      areas:
+        path_patterns:
+          - ^/api(?!/doc$)
+        host_patterns:
+          - ^/apps/test/api(?!/doc$)
+
+when@prod:
+  nelmio_api_doc:
+    documentation:
+      servers:
+        - url: https://b24-appserv.frhc.group/apps/prod/tariffs
+          description: API over HTTPS
+
+when@preprod:
+  nelmio_api_doc:
+    documentation:
+      servers:
+        - url: https://b24-appserv.frhc.group/apps/preprod/tariffs
+          description: API over HTTPS
